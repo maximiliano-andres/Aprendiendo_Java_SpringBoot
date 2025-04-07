@@ -1,12 +1,13 @@
 package com.Repasando.Java2025.controllers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.Repasando.Java2025.config.AppLogger;
 import com.Repasando.Java2025.domain.models.Persona;
 import com.Repasando.Java2025.services.PersonaServices;
 
@@ -14,8 +15,9 @@ import com.Repasando.Java2025.services.PersonaServices;
 @Controller
 public class HomeControllers {
 
-    private static final Logger logger = LoggerFactory.getLogger(HomeControllers.class);
-    private String debug = "DEBUG ---- HOMECONTROLLERS: ";
+    //DEBUGE
+    //private static final Logger logger = LoggerFactory.getLogger(HomeControllers.class);
+    //private String debug = "DEBUG ---- HOMECONTROLLERS: ";
     
     private final PersonaServices personaServices;
 
@@ -31,7 +33,10 @@ public class HomeControllers {
         model.addAttribute("maxi", persona);
 
         //System.out.println(persona);
-        logger.info("\u001B[36m{} : {}\u001B[0m",debug, persona);
+        //logger.info("\u001B[36m{} : {}\u001B[0m",debug, persona);
+        
+        AppLogger.info(persona);
+        //AppLogger.error(persona);
 
         return "index";
     }
