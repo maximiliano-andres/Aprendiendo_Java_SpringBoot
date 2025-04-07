@@ -6,6 +6,7 @@ package com.Repasando.Java2025.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.Repasando.Java2025.config.AppLogger;
 import com.Repasando.Java2025.domain.models.Persona;
@@ -13,6 +14,7 @@ import com.Repasando.Java2025.services.PersonaServices;
 
 
 @Controller
+@RequestMapping("/principal")
 public class HomeControllers {
 
     //DEBUGE
