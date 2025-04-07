@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Java2025Application<Java2025>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.Repasando.Java2025.Java2025Application",
+            "projectName": "Java2025",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
