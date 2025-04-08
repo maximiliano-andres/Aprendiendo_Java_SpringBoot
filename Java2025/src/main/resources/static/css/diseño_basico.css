@@ -1,0 +1,49 @@
+body {
+    background-image: url(/images/fondo_default.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Contenedor del formulario */
+.form-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px 30px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.527); /* Ligera transparencia */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(3px);
+    color: #ffffff;
+}
+
+/* Mejora visual para los inputs */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Botón con sombra y efecto hover */
+.btn-primary {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
