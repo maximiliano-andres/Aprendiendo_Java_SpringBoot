@@ -4,6 +4,15 @@
     <title>Mi Aplicación Spring Boot</title>
 </head>
 <body>
+    <form action="/principal/home" method="get">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad">
+        
+        <button type="submit">Enviar</button>
+    </form>
     <h1>Hola, <span th:text="${maxi.nombre}">Mundo</span>!</h1>
     <h2 th:text="${maxi.edad}"></h2>
 </body>

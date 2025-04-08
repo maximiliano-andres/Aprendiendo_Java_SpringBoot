@@ -7,8 +7,8 @@ import com.Repasando.Java2025.domain.models.Persona;
 @Service
 public class PersonaServices {
 
-    public Persona obtenerPersona(){
-        return new Persona("Maximiliano Andres Caniullan", 29);
+    public Persona obtenerPersona(String nombre, Integer edad){
+        return new Persona(nombre,edad);
     }
 
 }

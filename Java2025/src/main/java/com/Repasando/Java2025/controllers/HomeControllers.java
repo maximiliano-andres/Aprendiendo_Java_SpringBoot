@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.Repasando.Java2025.config.AppLogger;
 import com.Repasando.Java2025.domain.models.Persona;
@@ -29,15 +30,21 @@ public class HomeControllers {
     }
 
     @GetMapping("/home")
-    public String home(Model model){
-        Persona persona = personaServices.obtenerPersona();
-
+    public String home(@RequestParam(name = "nombre", defaultValue = "Maximiliano Andres Caniullan") String nombre, 
+                        @RequestParam(name = "edad", defaultValue = "29") Integer edad, Model model){
+                            
+        if(nombre.isBlank() || edad != null){
+        Persona persona = personaServices.obtenerPersona(nombre,edad);
         model.addAttribute("maxi", persona);
+        
+        AppLogger.info(persona);
+        }
+        
 
         //System.out.println(persona);
         //logger.info("\u001B[36m{} : {}\u001B[0m",debug, persona);
         
-        AppLogger.info(persona);
+        
         //AppLogger.error(persona);
 
         return "index";
